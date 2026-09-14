@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body
+{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eeeff1;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+h1
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+.nascimento
+{
+    background: #fff;
+  width: 420px;
+  border: 1px solid #333;
+  border-radius: 0px;
+  padding: 20px 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nasdia
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.nasmes
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.nasano
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.mostrarMes
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.mostrarDiaSemana
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.mostrarIdade
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.mostrarSigno
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.mostrarAnoBissexto
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.botoes
+{
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
