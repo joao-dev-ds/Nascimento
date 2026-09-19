@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nascimento</title> 
     <link rel="stylesheet" href="assets/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Bem-vindo ao site de Nascimento</h1>
     
-    <form class="Nascimento" onsubmit="return calcularIdade()">
+    <!-- Sem atributos style inline -->
+    <h2 id="mensagem"></h2>
+
+    <form class="Nascimento" onsubmit="calcularIdade(); return false;">
         
         <div class="nasdia">
             <label for="txtdia">Informe o dia:</label>
             <input type="text" id="txtdia" name="txtdia" required><br><br>
         </div>
 
-        <div class="nasmes">
+        <div class="txtmes">
             <label for="txtmes">Informe o mês:</label>
             <input type="text" id="txtmes" name="txtmes" required><br><br>
         </div>
 
-        <div class="nasano">
+        <div class="txtano">
             <label for="txtano">Informe o ano:</label>
             <input type="text" id="txtano" name="txtano" required><br><br>
         </div>
@@ -42,19 +48,26 @@
             <input type="text" id="txtidade" name="txtidade" readonly><br><br>
         </div>
 
+        <!-- Bloco do Signo limpo -->
         <div class="mostrarSigno">
-            <label for="txtsigno">Signo:</label>
-            <input type="text" id="txtsigno" name="txtsigno" readonly><br><br>
+            <label>Signo:</label>
+            <div class="card-signo">
+                <span id="txtsigno"></span>
+                <div class="box-imagem">
+                    <img src="" alt="" id="signo">
+                </div>
+            </div>
+            <br>
         </div>
 
         <div class="mostrarAnoBissexto">
             <label for="txtano_bissexto">Ano Bissexto:</label>
-            <input type="text" id="txtano_bissexto" name="txtano_bissexto" readonly><br><br>
+            <input type="text" id="txtano_bissexto" readonly><br><br>
         </div>
 
         <div class="botoes">
             <input type="submit" value="Exibir">
-            <input type="reset" value="Limpar">
+            <input type="reset" value="Limpar" onclick="limparSigno()">
         </div>
 
     </form>
