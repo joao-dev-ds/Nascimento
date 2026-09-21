@@ -21,7 +21,6 @@ h1 {
   height: 60px;
 }
 
-/* Estilo da mensagem de parabéns migrado do HTML/JS */
 #mensagem {
   visibility: hidden;
   color: green;
@@ -60,7 +59,6 @@ input[readonly] {
   user-select: none;
 }
 
-/* --- BLOCO DO SIGNO E RESERVA DE ESPAÇO --- */
 
 .card-signo {
   display: flex;
@@ -70,7 +68,7 @@ input[readonly] {
   margin-top: 8px;
   padding: 12px;
   background-color: #f9f9f9;
-  border: 1px dashed #ccc;
+  border: 1px ;
 }
 
 #txtsigno {
@@ -79,10 +77,9 @@ input[readonly] {
   color: #666;
   margin-bottom: 8px;
   text-transform: uppercase;
-  min-height: 20px; /* Evita pulo de layout quando estiver vazio */
+  min-height: 20px; 
 }
 
-/* Estilo do texto ativo migrado do JS */
 #txtsigno.ativo {
   color: #333;
 }
@@ -106,7 +103,6 @@ input[readonly] {
   display: none;
 }
 
-/* Exibição da imagem migrada do JS */
 #signo.ativo {
   display: block;
 }
