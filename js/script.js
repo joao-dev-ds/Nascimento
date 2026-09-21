@@ -42,6 +42,12 @@ function calcularIdade() {
     }
     a_ani = parseInt(a_ani);
 
+    if ((d_ani < 1) || (dia > 31)){
+        alert("Não Pode")
+    }
+    else if (((d_ani >= 1) && (d_ani <= 31)) && ((m_ani == 1) || (m_ani == 3) || (mes == 5) || (m_ani == 7) || (m_ani == 8) (m_ani == 10) || (m_ani == 12)))
+        
+
     // Data atual
     var hoje = new Date();
     var d_hoj = hoje.getDate();
