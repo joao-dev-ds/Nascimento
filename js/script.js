@@ -42,11 +42,22 @@ function calcularIdade() {
     }
     a_ani = parseInt(a_ani);
 
-    if ((d_ani < 1) || (dia > 31)){
-        alert("Não Pode")
+    // Validação do dia de acordo com o mês (fevereiro/bissexto)
+    var diasNoMes;
+    if (m_ani === 1 || m_ani === 3 || m_ani === 5 || m_ani === 7 || m_ani === 8 || m_ani === 10 || m_ani === 12) {
+        diasNoMes = 31;
+    } else if (m_ani === 4 || m_ani === 6 || m_ani === 9 || m_ani === 11) {
+        diasNoMes = 30;
+    } else {
+        // Fevereiro: verifica se o ano é bissexto
+        var bissextoParaFevereiro = (a_ani % 4 === 0 && a_ani % 100 !== 0) || (a_ani % 400 === 0);
+        diasNoMes = bissextoParaFevereiro ? 29 : 28;
     }
-    else if (((d_ani >= 1) && (d_ani <= 31)) && ((m_ani == 1) || (m_ani == 3) || (mes == 5) || (m_ani == 7) || (m_ani == 8) (m_ani == 10) || (m_ani == 12)))
-        
+
+    if (d_ani > diasNoMes) {
+        alert("O mês " + nome_mes[m_ani - 1] + " não tem o dia " + d_ani + "!");
+        return;
+    }
 
     // Data atual
     var hoje = new Date();
@@ -54,7 +65,6 @@ function calcularIdade() {
     var m_hoj = hoje.getMonth() + 1;
     var a_hoj = hoje.getFullYear();
 
-    // Mensagem de aniversário usando classe do CSS
     var elMensagem = document.getElementById("mensagem");
     if (d_hoj === d_ani && m_hoj === m_ani) {
         elMensagem.innerText = "P A R A B É N S...";
